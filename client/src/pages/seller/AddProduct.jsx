@@ -16,7 +16,7 @@ const AddProduct = () => {
   return (
     <div className="no-scrollbar flex-1 h-[95vh] overflow-y-scroll flex flex-col justify-between">
       <form
-        onSubmi={onSubmitHandler}
+        onSubmit={onSubmitHandler}
         className="md:p-10 p-4 space-y-5 max-w-lg"
       >
         <div>
@@ -129,7 +129,7 @@ const AddProduct = () => {
             />
           </div>
         </div>
-        <button className="px-8 py-2.5 bg-primary text-white font-medium rounded">
+        <button className="px-8 py-2.5 bg-primary text-white font-medium rounded cursor-pointer">
           ADD
         </button>
       </form>
