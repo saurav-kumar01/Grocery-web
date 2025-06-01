@@ -105,15 +105,16 @@ export const login = async (req, res) => {
 
 export const isAuth = async (req, res) => {
   try {
-    const { userId } = req.body;
+    const userId = req.userId;
     const user = await User.findById(userId).select("-password");
+
     return res.json({
       success: true,
       user,
     });
   } catch (error) {
     console.error(error.message);
-    res.json({
+    return res.json({
       success: false,
       error: error.message,
     });
