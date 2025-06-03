@@ -10,7 +10,7 @@ export const sellerLogin = async (req, res) => {
       password === process.env.SELLER_PASSWORD &&
       email === process.env.ADMIN_EMAIL
     ) {
-      const token = jwt.sign({ email }, password.env.JWT_SECRET, {
+      const token = jwt.sign({ email }, process.env.JWT_SECRET, {
         expiresIn: "7d",
       });
 
